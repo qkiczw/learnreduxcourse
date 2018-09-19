@@ -11,7 +11,7 @@ import posts from './data/posts';
 
 // create an object for the default data
 const defaultSate = {
-    post,
+    posts,
     comments
 }
 
