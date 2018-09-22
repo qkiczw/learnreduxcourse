@@ -16,13 +16,13 @@ const Photo = React.createClass({
                     transitionEnterTimeout={500}
                     transitionLeaveTimeout={500}
                     >
-                    <span key={post.likes}>{post.likes}</span>
+                    <span key={post.likes} className='likes-heart'>{post.likes}</span>
                     </CSStransitionGroup>
                 </div>
                 <figcaption>
                     {post.caption}
                     <div className='control-buttons'>
-                        <button className='likes'>&hearts; {post.likes}</button>
+                        <button onClick={this.props.increment.bind(null, i)} className='likes'>&hearts; {post.likes}</button>
                         <Link className='button' to={`/view/${post.code}`}>
                             <span className='comment-count'>
                                 <span className='speech-bouble'></span>
